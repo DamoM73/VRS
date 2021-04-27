@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/topBar"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@android:color/black">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Virtual-RC"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true">
+
+                    <androidx.appcompat.widget.ActionMenuView
+                        android:id="@+id/toolbar_bottom"
+                        style="@style/TextAppearance.AppCompat.Large"
+                        android:layout_width="56dp"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp" />
+
+                    <ImageView
+                        android:id="@+id/gamepadImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="100dp"
+                        android:background="@drawable/ic_baseline_videogame_asset_24"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/userLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="User 1"
+                        android:textColor="@android:color/white" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/infoBar"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/topBar"
+                android:background="@drawable/background_border">
+
+                <RelativeLayout
+                    android:layout_width="115dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/rounded_rectangle">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/activeConfigTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="Active Config"
+                            android:textColor="@android:color/white"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/activeConfigName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/activeConfigTitle"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="1dp"
+                            android:gravity="center"
+                            android:text="..."
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/circle">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/fpsTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="FPS"
+                            android:textColor="@android:color/white"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/fpsNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/fpsTitle"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="..."
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="115dp"
+                    android:background="@drawable/rounded_rectangle">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/robotNumberTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:gravity="center"
+                            android:text="Robot #"
+                            android:textColor="@android:color/white"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/robotSelectTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_toRightOf="@id/robotNumberTitle"
+                            android:text="0"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:textSize="14dp" />
+
+                        <Spinner
+                            android:id="@+id/robotSelect"
+                            android:layout_width="50dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@id/robotSelectTitle"
+                            android:layout_marginLeft="22.5dp" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/opModeSelectorBar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/infoBar"
+                android:background="@color/redSuperLight">
+
+                <Spinner
+                    android:id="@+id/classSelector"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-50dp"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/playButtonArea"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/opModeSelectorBar"
+                android:background="@drawable/play_button_area_background">
+
+                <Button
+                    android:id="@+id/initStartButton"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/init_button"
+                    android:text="INIT"
+                    android:textColor="@android:color/black"
+                    android:textSize="25dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/telemetryArea"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_below="@+id/playButtonArea"
+                android:background="@android:color/black"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/telemetryTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/white" />
+
+                <ProgressBar
+                    android:id="@+id/loadingSign"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="25dp"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
